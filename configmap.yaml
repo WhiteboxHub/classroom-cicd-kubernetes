@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastapi-config
+data:
+  ENV: "development"
+  APP_NAME: "FastAPI Classroom API"
