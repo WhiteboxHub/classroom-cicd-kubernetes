@@ -16,8 +16,16 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: 
+        image: manisaireddy21/testing:mini-api  # Provide your image name
+        ports:
         - containerPort: 8000
         envFrom:
         - configMapRef:
             name: fastapi-config
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
